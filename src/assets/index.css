@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: 14px !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.m {
+  color: #1c1917;
+}
+
+.n {
+  color: #262626;
+}
+
+.ns {
+  color: #262626;
+  font-weight: bold;
+}
+
+.btnP {
+  background-color: #1c1917;
+  color: white;
+}
+
+.btnP:hover {
+  background-color: #262626 !important;
+  color: white !important;
+}
+
+.btnS {
+}
+
+Button {
+  width: 100%;
+}
+
+/* from phase 2 */
+
+.topheader {
+  /* height: 20vh; */
+}
+
+._link {
+  text-decoration: none;
+  color: black !important;
+}
+
+.landing-page {
+  min-height: 80vh;
+}
+
+.myfooter {
+  height: 20vh;
+}
+
+.myBtn {
+  background-color: black !important;
+  color: white !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.mainLayout {
+  min-height: 100vh !important;
+}
+
+.mainLayout .sidebar {
+  position: fixed;
+  width: 250px !important;
+  height: 100%;
+}
+
+.mainLayout .content {
+  margin-left: 250px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainLayout .content {
+    margin-left: 0px !important;
+  }
+}
+
+/* editor */
+
+.ql-container.ql-snow {
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.ant-drawer-close {
+  width: 20% !important;
+}
+
+.ant-upload-wrapper.ant-upload-picture-card-wrapper
+  .ant-upload.ant-upload-select {
+  width: 100% !important;
+  height: 150px !important;
+}
+
+.active {
+  border-right: 5px solid blue !important;
+}
+
+.image-container {
+  position: relative;
+  width: 180px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.img-gallery {
+  transition: transform 0.3s;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container:hover .img-gallery {
+  transform: scale(1.1);
+}
+
+.ant-modal {
+  top: 40px !important;
+}
+
+.ant-modal-content {
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.hoverable {
+  padding: 3px 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 15px;
+  border: 2px solid #add8e6; /* Light blue border */
+}
+
+.hoverable:hover {
+  background-color: #eff6ff;
+  transform: scale(1.05);
+}
+
+.bg-custom {
+  background-color: #1a1a1de8 !important;
+}
+
+.bg-custom-menu {
+  background-color: transparent !important;
+}
+
+.ant-menu-submenu ul {
+  background-color: #1a1a1de8 !important;
+}
+
+.bg-custom-menu .anticon svg {
+  color: white;
+}
+
+.font-item {
+  font-size: 15px !important;
+}
+
+.bg-custom-item:hover::after {
+  border-bottom: 3px solid #fff !important;
+  margin-bottom: 0.5px !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .ant-layout-header {
+    height: 44px !important;
+    padding: 0px !important;
+  }
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  background-color: #1890ff !important;
+}
+
+.ant-carousel .slick-dots li button {
+  background: #f70000;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+}
+
+.image-card {
+  width: 100%;
+  max-height: 540px;
+  overflow: hidden;
+  box-shadow: none !important;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.text-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  padding: 20px;
+  margin-left: 50px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border-radius: 10px;
+}
+
+h3 {
+  margin-bottom: 33px !important;
+}
+
+.card-rm-padding .ant-card-body {
+  padding: 24px 24px 15px 0px !important;
+}
+
+.card-rm-padding h1 {
+  padding-bottom: 5px !important;
+}
+
+.card-ovf-hidden .ant-card-cover {
+  overflow: hidden !important;
+}
