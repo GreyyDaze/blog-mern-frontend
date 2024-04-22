@@ -23,7 +23,7 @@ const ResponsiveNavBar = () => {
 
   return (
     <>
-      <Header className="bg-custom">
+      <Header className="bg-custom sticky-header">
         <Row className="container">
           {points.md && (
             <Col span={8}>
