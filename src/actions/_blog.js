@@ -141,12 +141,17 @@ export const useBlogForm = ({ values, setValues, categoriesList }) => {
   const [imageUrl, setImageUrl] = useState(null);
 
   useEffect(() => {
-    const selectedCategories = categoriesList.filter((item) =>
-      values.categories.includes(item.name)
-    );
+    if (categoriesList && values.categories) {
+      console.log(categoriesList, "from useBlogForm");
+      const selectedCategories = categoriesList?.filter((item) =>
+        values.categories.includes(item.name)
+      );
 
-    const selectedCategoryNames = selectedCategories.map((item) => item.name);
-    setDefaultCategories(selectedCategoryNames);
+      const selectedCategoryNames = selectedCategories.map((item) => item.name);
+      setDefaultCategories(selectedCategoryNames);
+    } else {
+      setDefaultCategories([]);
+    }
   }, [values.categories, categoriesList]);
 
   const handleCategoryChange = (selectedCategories) => {

@@ -49,7 +49,9 @@ const BlogForm = ({
               name="title"
               value={values.title}
               placeholder="Give your post a title"
-              onChange={(e) => setValues({ ...values, title: e.target.value })}
+              onChange={(e) => {
+                setValues({ ...values, title: e.target.value });
+              }}
             />
           </div>
 
@@ -58,12 +60,19 @@ const BlogForm = ({
             <ReactQuill
               theme="snow"
               value={values.content}
-              onChange={(v) => setValues({ ...values, content: v })}
+              onChange={(e) => {
+                setValues({ ...values, content: e });
+              }}
             />
           </div>
         </div>
       </Col>
-      <Col md={8} xs={24} className={points.md && "p-2"} onClick={showModal}>
+      <Col
+        md={8}
+        xs={24}
+        className={points.md && "p-2"}
+        onClick={imageUrl ? () => {} : showModal}
+      >
         {from == "edit" && (
           <div style={{ border: "2px dotted #a1a1aa", borderRadius: "10px" }}>
             {imageUrl || selectedImage ? (
@@ -175,10 +184,7 @@ const BlogForm = ({
             placeholder="Select categories"
             style={{ width: "100%" }}
             value={defaultCategories} // Use value instead of defaultValue
-            onChange={(e) => {
-              e.stopPropagation();
-              handleCategoryChange();
-            }}
+            onChange={handleCategoryChange}
           >
             {categoriesList.map((item) => (
               <Select.Option key={item.name}>{item.name}</Select.Option>
