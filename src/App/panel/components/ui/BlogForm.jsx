@@ -175,7 +175,10 @@ const BlogForm = ({
             placeholder="Select categories"
             style={{ width: "100%" }}
             value={defaultCategories} // Use value instead of defaultValue
-            onChange={handleCategoryChange}
+            onChange={(e) => {
+              e.stopPropagation();
+              handleCategoryChange();
+            }}
           >
             {categoriesList.map((item) => (
               <Select.Option key={item.name}>{item.name}</Select.Option>
